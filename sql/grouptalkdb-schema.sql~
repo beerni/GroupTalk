@@ -54,7 +54,6 @@ CREATE TABLE respuesta (
 	idtema BINARY(16) NOT NULL,
 	content VARCHAR(100) NOT NULL,
 	autor_respuesta BINARY(16) NOT NULL,
-	FOREIGN KEY (autor_respuesta) REFERENCES users (id) on delete cascade,
 	FOREIGN KEY (idtema) REFERENCES tema(id) on delete cascade,
 	PRIMARY KEY (id)
 );

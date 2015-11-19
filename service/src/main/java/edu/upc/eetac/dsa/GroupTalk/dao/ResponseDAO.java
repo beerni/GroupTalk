@@ -1,5 +1,6 @@
 package edu.upc.eetac.dsa.GroupTalk.dao;
 
+import edu.upc.eetac.dsa.GroupTalk.entity.RelacionUserGrupo;
 import edu.upc.eetac.dsa.GroupTalk.entity.Response;
 import edu.upc.eetac.dsa.GroupTalk.entity.ResponseCollection;
 
@@ -15,4 +16,5 @@ public interface ResponseDAO {
     public Response getRespuestaById(String id) throws SQLException;
     public ResponseCollection getResponses(String idtema) throws SQLException;
     public boolean deleteResponse (String id) throws SQLException;
+
 }

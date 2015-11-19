@@ -37,9 +37,7 @@ public class ResponseDAOImpl implements ResponseDAO {
             stmt.setString(3, autor_respuesta);
             stmt.setString(4,content);
             stmt.executeUpdate();
-            stmt.close();
 
-            connection.commit();
         } catch (SQLException e) {
             throw e;
         } finally {
@@ -134,7 +132,7 @@ public class ResponseDAOImpl implements ResponseDAO {
                 Response response = new Response();
                 response.setId(rs.getString("id"));
                 response.setIdtema(rs.getString("idtema"));
-                response.setAutor_respuesta(rs.getString("autor_tema"));
+                response.setAutor_respuesta(rs.getString("autor_respuesta"));
                 response.setContent(rs.getString("content"));
 
                 responseCollection.getResponses().add(response);
